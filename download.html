@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='language.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="left-side">
+        <div class="title-container">
+            <h1 class="title-text">King of Calculus</h1>
+        </div>
+        <div class="icon-container">
+            <img src="./pic/icon.jpeg" class="icon-spec">
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="instruct-container">
+            <h3 class="instruct-text">Client Downloads</h3>
+        </div>
+        <div class="button-container" id="mac">
+            <p class="button-text">MacOS (12.6 or newer)</p>
+        </div>
+        <div class="button-container" id="win">
+            <p class="button-text">Windows (xp, 7, 8, 10, 11)</p>
+        </div>
+        <div class="button-container-sp" id='go-back'>
+            <p class="button-text">Return to title page</p>
+        </div>
+    </div>
+    <audio src="./soundtracks/title-bgm.mp3" autoplay></audio>
+    <script>
+        document.getElementById('go-back').addEventListener('click', function() {
+            window.history.back();
+        });
+
+        //Initiate a download
+        document.getElementById('mac').addEventListener('click', function() {
+            const a = document.createElement('a');
+            a.href = './installer/macos';
+            a.download = 'KoC MacOS Client Installer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+
+        document.getElementById('win').addEventListener('click', function() {
+            const a = document.createElement('a');
+            a.href = './installer/win.exe';
+            a.download = 'KoC Windows Client Installer.exe';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+</body>
+</html>

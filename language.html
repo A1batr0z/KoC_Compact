@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <!--Multilingual Support-->
+    <meta charset="UTF-8">
+
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='language.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="left-side">
+        <div class="title-container">
+            <h1 class="title-text">King of Calculus</h1>
+        </div>
+        <div class="icon-container">
+            <img src="./pic/multilingual.jpeg" class="icon-spec">
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="instruct-container">
+            <h3 class="instruct-text">Language Settings</h3>
+        </div>
+        <div class="button-container" onclick="window.location.href='index.html';" style="margin-top:30px">
+            <p class="button-text">English</p>
+        </div>
+        <div class="button-container-sp" id="go-back">
+            <p class="button-text">Return to title page</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('go-back').addEventListener('click', function() {
+            window.history.back();
+        });
+    </script>
+</body>
+</html>

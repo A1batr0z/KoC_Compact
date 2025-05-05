@@ -1,0 +1,93 @@
+body {
+    font-family: 'Hubot Sans', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    display:flex;
+    overflow: hidden;
+}
+.left-side {
+    display:flex;
+    flex-direction: column;
+    width:60%;
+}
+.right-side {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    background-color: burlywood;
+}
+.title-container {
+    font-size: 3em;
+    background-color: yellow;
+    display:inline-block;
+}
+.title-text {
+    font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.icon-spec {
+    width:100%;
+    height:100%;
+}
+.instruct-container {
+    font-size: 3em;
+    display:flex;
+}
+.instruct-text {
+    color:brown;
+    text-align: center;
+}
+.button-container {
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-container:hover {
+    background-color: #D45D5D;
+    width: 120%; 
+    margin-left: -20%;
+}
+.button-container-id {
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-container-id:hover {
+    background-color: #D45D5D;
+    width: 200%; 
+    margin-left: -100%;
+    display:flex;
+    justify-content: space-around;
+}
+.button-container-id:hover #gameid {
+    display:flex;
+}
+.button-container-id:hover .button-text {
+    display:flex;
+    width: 50%;
+    white-space: nowrap;
+}
+#gameid {
+    display:none;
+    color:white;
+    font-size: 30px;
+    width:50%;
+    color:black;
+    margin:30px;
+    background-color: #F28A8A;
+}
+.button-text {
+    color:white;
+    font-size: 30px;
+    user-select: none;
+}

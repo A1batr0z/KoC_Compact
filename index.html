@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='index.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="left-side">
+        <div class="title-container">
+            <h1 class="title-text">King of Calculus</h1>
+        </div>
+        <div class="icon-container">
+            <img src="./pic/icon.jpeg" class="icon-spec">
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="instruct-container">
+            <h3 class="instruct-text">Start your adventure, here!</h3>
+        </div>
+        <div class="button-container" onclick="window.location.href='new/new-profile.html';">
+            <p class="button-text">Start a new game</p>
+        </div>
+        <div class="button-container-id" onclick="validateID()" id="container-id">
+            <input type="text" id="gameid" onclick="inputClick(event)">
+            <p class="button-text" id="button-text-id">Load an existing game</p>
+        </div>
+        <div class="button-container" onclick="window.location.href='language.html';">
+            <p class="button-text">Language settings</p>
+        </div>
+        <div class="button-container" onclick="window.location.href='download.html';">
+            <p class="button-text">Download Client</p>
+        </div>
+        <div class="button-container" onclick="showAbt()">
+            <p class="button-text">About King of Calculus</p>
+        </div>
+    </div>
+    <audio src="./soundtracks/title-bgm.mp3" autoplay></audio>
+    <script>
+        const special_container = document.getElementById('container-id');
+        const id_con_text = document.getElementById('button-text-id');
+
+        function validateID() {
+            let gameIDs = ['j9812d928']
+            let id = document.getElementById('gameid');
+
+            if(id.value != undefined && id.value) {
+                if(gameIDs.includes(id.value)) {
+                    alert('Player progress found, click on Close to redirect!');
+                }else {
+                    alert('The Game ID you\'ve provided is not valid!');
+                }
+            }
+        }
+
+        function inputClick(event) {
+            event.stopPropagation();
+        }
+
+        function showAbt() {
+            alert('About King of Calculus v1.0 (Preview build)\n\nInspired by oddorobo\'s classic "King of Math" and my high school calculus teacher (literally whom this game is credited to), King of Calculus is an online video game that allows you to practice your calculus skills while competing with other players worldwide.')
+        }
+
+        function feedback() {
+            let usrtxt = prompt('Encountered some bugs while playing, or simply having ideas to make this game better? You can tell us about them here!');
+            if(usrtxt == null || !usrtxt) {
+                return;
+            }
+            let usrcontact = prompt('May we have your email as well? This will allow us to send follow-ups of your feedback!\n(This is completely optional. You can submit this field as blank)');
+            if(!(usrcontact)) {
+                usrcontact = 'Anonymous';
+            }
+            alert('Feedback submitted\n@' + new Date() + '\n\nContent:\n' + usrtxt + '\n\nEmail: ' + usrcontact + '\n\nThank you for helping us to improve the game!')
+            return;
+        }
+
+        special_container.addEventListener('mouseover', () => {
+            id_con_text.innerHTML = 'Continue with Player ID';
+        });
+
+        special_container.addEventListener('mouseout', () => {
+            id_con_text.innerHTML = 'Load an existing game';
+        });
+    </script>
+</body>
+</html>

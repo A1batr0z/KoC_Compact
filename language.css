@@ -1,0 +1,67 @@
+body {
+    font-family: 'Hubot Sans', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    display:flex;
+    overflow: hidden;
+}
+.left-side {
+    display:flex;
+    flex-direction: column;
+    width:60%;
+}
+.right-side {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    background-color: burlywood;
+}
+.title-container {
+    font-size: 3em;
+    background-color: yellow;
+    display:inline-block;
+}
+.title-text {
+    font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.icon-spec {
+    width:100%;
+    height:100%;
+}
+.instruct-container {
+    font-size: 3em;
+    display:flex;
+}
+.instruct-text {
+    color:brown;
+    text-align: center;
+}
+.button-container {
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.button-container:hover {
+    background-color: #D45D5D;
+    width: 120%; 
+    margin-left: -20%;
+}
+.button-text {
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    user-select: none;
+}
+.button-container-sp {
+    background-color: #228B8B;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.button-container-sp:hover{
+    background-color: aquamarine;
+    width: 120%; 
+    margin-left: -20%;
+}
