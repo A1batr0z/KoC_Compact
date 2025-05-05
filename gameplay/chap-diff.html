@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <!--Accent dependency-->
+    <meta charset="UTF-8">
+
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='menu-styling-universal.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="left-side">
+        <div class="title-container">
+            <h1 class="title-text">King of Calculus</h1>
+        </div>
+        <div class="icon-container">
+            <img src="../pic/icon.jpeg" class="icon-spec">
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="instruct-container">
+            <h3 class="instruct-text">Differentiation</h3>
+        </div>
+        <div class="button-container" onclick="window.location.href='differentiation/stage-1.html';" style="margin-top:0px">
+            <p class="button-text">Level I (Linear)</p>
+        </div>
+        <div class="button-container" onclick="window.location.href='differentiation/stage-2.html';">
+            <p class="button-text">Level II (Product & Quotient)</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Level III (Exponent & Logarithm)</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Mix I (Chain Rule)</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Level IV (Trigonometry)</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Level V (L'Hôpitals)</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Mix II (Advanced)</p>
+        </div>
+        <div class="button-container" id="button-container-sp" onclick="window.location.href='menu.html';">
+            <p class="button-text">Return to Menu</p>
+        </div>
+    </div>
+    <script>
+        function unavailable() {
+            alert('This chapter is currently unavailable. To unlock, you need to finish the previous chapter!')
+        }
+    </script>
+</body>
+</html>

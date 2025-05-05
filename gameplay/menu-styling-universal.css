@@ -1,0 +1,122 @@
+body {
+    font-family: 'Hubot Sans', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    display:flex;
+    overflow:hidden;
+}
+.left-side {
+    display:flex;
+    flex-direction: column;
+    width:60%;
+}
+.right-side {
+    display:flex;
+    flex-direction: column;
+    width:40%;
+    background-color: burlywood;
+    height: auto;
+}
+.title-container {
+    font-size: 3em;
+    background-color: yellow;
+    display:inline-block;
+}
+.title-text {
+    font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.icon-spec {
+    width:100%;
+    height:100%;
+}
+.instruct-container {
+    font-size: 3em;
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+.instruct-text {
+    color:brown;
+    text-align: center;
+    align-items: center;
+    margin-left:40px;
+}
+.button-container {
+    height: 7%;
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-container:hover {
+    background-color: #D45D5D;
+    width: 120%; 
+    margin-left: -20%;
+}
+.button-text {
+    color:white;
+    font-size: 20px;
+    user-select: none;
+}
+#locked {
+    background-color: grey;
+}
+#locked:hover{
+    background-color: darkgrey;
+    width:100%;
+    margin-left: 0;
+}
+#button-container-sp {
+    background-color: #228B8B;
+    margin-bottom: 10px;
+}
+#button-container-sp:hover{
+    background-color: aquamarine;
+}
+.profile-dis{
+    margin-top:auto;
+    background-color:#C99F72;
+    height:18%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.profile-top{
+    height:23%;
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+}
+.profile-dis-title{
+    font-weight: bold;
+    font-size:1em;
+    margin-left:15px;
+    margin-block-start: 0.7em;
+    margin-block-end: 0em;
+}
+.profile-dis-quit{
+    margin-left: auto;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size:1em;
+    margin-block-start: 0.7em;
+    margin-block-end: 0em;
+}
+.info-dis{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-left:60px;
+}
+.entry-fields{
+    display:inline;
+    font-size:15px;
+    background-color: #F5DEB3;
+    width:50%;
+    margin-left: 1px;
+    text-align: center;
+}

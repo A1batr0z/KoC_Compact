@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='menu-styling-universal.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="left-side">
+        <div class="title-container">
+            <h1 class="title-text">King of Calculus</h1>
+        </div>
+        <div class="icon-container">
+            <img src="../pic/icon.jpeg" class="icon-spec">
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="instruct-container">
+            <h3 class="instruct-text">Chapter Menu</h3>
+        </div>
+        <div class="button-container" onclick="window.location.href='chap-diff.html';" style="margin-top:0px">
+            <p class="button-text">Differentiation</p>
+        </div>
+        <div class="button-container" onclick="window.location.href='chap-integ.html';">
+            <p class="button-text">Integration</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Infinite Series</p>
+        </div>
+        <div class="button-container" id="locked" onclick="unavailable()">
+            <p class="button-text">Mix [Volume I]</p>
+        </div>
+        <!--
+        <div class="button-container" id="button-container-sp" onclick="window.location.href='index.html';">
+            <p class="button-text">Return to title page</p>
+        </div>
+        -->
+        <div class="profile-dis">
+            <div class="profile-top">
+                <p class="profile-dis-title">Current Session</p>
+                <a class="profile-dis-quit" href = '../index.html'>Log out</a>
+            </div>
+            <div class="playerid-dis">
+                <label class="info-dis" for="usrn" style="margin-left:59px;">Logged in as: </label>
+                <input type="text" name="usrn" class="entry-fields" id="usrn-e" readonly>
+            </div>
+            <div class="playerid-dis">
+                <label class="info-dis" for="pid" style="margin-left:81px;">Player ID:</label>
+                <input type="text" name="pid" class="entry-fields" id="playerid-e" readonly>
+            </div>
+        </div>
+    </div>
+    <script>
+        function unavailable() {
+            alert('This chapter is currently unavailable. To unlock, you need to finish the previous chapter!')
+        }
+
+        let usrn = '  '+localStorage.getItem('usrname')
+        let id = localStorage.getItem('playerid')
+
+        document.getElementById('usrn-e').value = usrn;
+        document.getElementById('playerid-e').value = id;
+
+        console.log('Page loaded')
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <!--Google font prerequisite-->
+    <!--Basic font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Fancy fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!--Cascading style sheet-->
+    <link href='result.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="top-Integrity">
+        <h1 class="title-text" id="result-display">TBD</h1>
+    </div>
+    <div class="player-profile">
+        <div class="abt-char">
+            <div class="profile-pic">
+                <img src="" class="chosen-icon" id="icon-dis">
+            </div>  
+            <div class="character-spec">
+                <p class="char-des" id="name" style="margin-block-start: 0;display: inline;"><b>Hero selected:</b> <p class="cname" id="name-dis"></p></p>
+                <p class="char-des"><b>Final score:</b> <p class="game-stats-des" id="score-dis">0</p></p>
+                <p class="char-des"><b>Remaining lives:</b> <p class="game-stats-des" id="lives-dis">3</p></p>
+                <p class="char-des"><b>Level progress:</b><p class="progress-des" id="pro-dis">Default</p></p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-part">
+        <div class="button-container" onclick="window.location.href='chap-diff.html';">
+            <p class="button-text">Proceed</p>
+        </div>
+    </div>
+    <!--<audio src="new-profile-bgm.mp3" autoplay></audio>-->
+    <script>
+        let result = localStorage.getItem('win');
+        let stats = localStorage.getItem('stats').split(',');
+        if(result == 'true') {
+            document.getElementById('result-display').innerHTML = 'Level completed!'
+        }else {
+            document.getElementById('result-display').innerHTML = 'Level failed!';
+        }
+
+        console.log('exe')
+
+        let selected_name = localStorage.getItem('selected');
+
+        document.getElementById('name-dis').innerHTML = ' '+selected_name;
+        document.getElementById('icon-dis').src = '../pic/'+selected_name+'.jpg';
+        document.getElementById('score-dis').innerHTML = stats[0];
+        document.getElementById('lives-dis').innerHTML = '<i>'+stats[2]+'</i>'+' /3';
+        document.getElementById('pro-dis').innerHTML = '<i>'+stats[1]+'</i>'+' /10';
+
+        //Save player progress here (future updates)
+
+        switch(selected_name){
+                case 'Joshua Gordon':
+                    break;
+                case 'Josephine Gordania':
+                    break;
+                case 'Dr. Gasser Khalifa':
+                    break;
+                case 'George Martin':
+                    break;
+            }
+    </script>
+</body>
+</html>
