@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <!--Math expression font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Cactus+Classical+Serif&family=Great+Vibes&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!--Google font prerequisite-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Cascading style sheet-->
+    <link href='../stage-styling-universal.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="control-button" id="fall-back"><img src="../../pic/control.png" width="50px"></div>
+        <div class="top-status-container">
+            <p class="top-status-text">Differentiation - Level II</p>
+        </div>
+        <div class="top-status-container">
+            <p class="top-status-text" id="score-display">Score:</p>
+        </div>
+    </div>
+    <div class="problem-container">
+        <div class="game-stats">
+            <p class="progress" id="progress-display">Question: 1/10</p>
+            <p class="lives-display" id="life-display">Lives left: 3</p>
+        </div>
+        <p class="current-task" id="instruction">Find the derivative of: </p>
+        <p class="current-problem" id="problem-display" style="margin-bottom: 100px;">[Problem]</p>
+    </div>
+    <div class="options-container">
+        <div class="option-single" id="option-1"></div>
+        <div class="option-single" id="option-2"></div>
+        <div class="option-single" id="option-3"></div>
+        <div class="option-single" id="option-4"></div>
+    </div>
+    <audio src="tbd" autoplay></audio>
+    <script src="stage-2.js"></script>
+</body>
+</html>
