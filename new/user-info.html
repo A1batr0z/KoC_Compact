@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <!--Google font prerequisite-->
+    <!--Basic font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!--Fancy fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Great+Vibes&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    
+    <!--Cascading style sheet-->
+    <link href='user-info.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="top-Integrity">
+        <div class="return-container" onclick="window.location.href='new-profile.html';">
+            <h1 class="return-text">&lt;&lt;&lt; Return to previous step</h1>
+        </div>
+        <div class="title-container">
+            <h1 class="title-text">Finalizing your player profile</h1>
+        </div>
+    </div>
+    <div class="player-profile">
+        <div class="abt-char">
+            <div class="profile-pic">
+                <img src="" class="chosen-icon" id="icon-dis">
+            </div>  
+            <div class="character-spec">
+                <p class="char-des" id="name" style="margin-block-start: 0;display: inline;"><b>Hero:</b> <p class="cname" id="name-dis"></p></p>
+                <p class="char-des" id="trait"><b>Traits:</b> <p class="trait-des">Trait #1 not enabled</p> <p class="trait-des">Trait #2 not enabled</p> </p>
+                <p class="char-des" id="ability"><b>Ability:</b><p class="ability-des">Ability not enabled</p></p>
+            </div>
+        </div>
+        <div class="user-spec">
+            <div class="usrn-container">
+                <label for="usrn" class="entry-title" id="username-e">Username: </label>
+                <input type="text" name="usrn" class="entry-fields" id="usrn-field">
+            </div>
+            <div class="usrid-container">
+                <label for="pid" class="entry-title">Player ID: </label>
+                <input type="text" name="pid" class="entry-fields" value="Default value" style="margin-left:28px;" id="player-id-dis" readonly>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-part">
+        <div class="button-container" onclick="loadnext()">
+            <p class="button-text">Create new player profile</p>
+        </div>
+    </div>
+    <!--<audio src="new-profile-bgm.mp3" autoplay></audio>-->
+    <script>
+        function genRandStr(len) {
+            let randstr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let res = '';
+            for(let i = 0; i < len; i++){
+                res += randstr[Math.round(Math.random()*(randstr.length - 1))];
+            }
+            return res;
+        }
+
+        let selected_name = localStorage.getItem('selected');
+
+        document.getElementById('name-dis').innerHTML = ' '+selected_name;
+        document.getElementById('icon-dis').src = '../pic/'+selected_name+'.jpg';
+
+        let playerIdSession = genRandStr(16);
+        document.getElementById('player-id-dis').value = playerIdSession;
+
+        switch(selected_name){
+                case 'Joshua Gordon':
+                    break;
+                case 'Josephine Gordania':
+                    document.getElementById('name-dis').style.fontSize = '22px'
+                    break;
+                case 'Dr. Gasser Khalifa':
+                    break;
+                case 'George Martin':
+                    break;
+            }
+
+        function loadnext() {
+            if(document.getElementById('usrn-field').value){
+                localStorage.setItem('usrname', document.getElementById('usrn-field').value);
+                localStorage.setItem('playerid', playerIdSession);
+                window.location.href='../gameplay/menu.html';
+            }else {
+                alert('Please enter a valid username')
+            }
+        }
+    </script>
+</body>
+</html>

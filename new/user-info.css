@@ -1,0 +1,148 @@
+html, body {
+    font-family: 'Hubot Sans', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    height:100%;
+    overflow: hidden;
+}
+.top-Integrity {
+    display:flex;
+    flex-direction: row;
+}
+.title-container {
+    font-size: 2em;
+    background-color: yellow;
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    display:flex;
+    justify-content: center;
+}
+.title-text {
+    font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.return-container {
+    font-size: 8px;
+    background-color: yellowgreen;
+    display:flex;
+    flex-direction: row;
+    width:20%;
+    display:flex;
+    justify-content: center;
+}
+.return-container:hover{
+    background-color:forestgreen;
+}
+.return-text {
+    font-size: 16px;
+    margin-top:35px;
+    text-align: center;
+}
+.player-profile {
+    background-color:burlywood;
+    display:flex;
+    flex-direction: column;
+    height:65%;
+    padding:65px 290px 15px 310px;
+}
+.abt-char {
+    display:flex;
+    flex-direction: row;
+    height:67%;
+}
+.profile-pic {
+    display: flex;
+    height:95%;
+    width:48%;
+}
+.chosen-icon {
+    height: auto;
+    width: 100%;
+    border: gold solid 4px;
+    display:flex;
+}
+.character-spec {
+    height:60%;
+    margin-left:80px;
+    font-size:26px;
+}
+.char-des {
+    margin-block-start: 16px;
+    margin-block-end: 0;
+}
+.cname {
+    font-style: italic;
+    display:inline;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.trait-des {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size:24px;
+}
+.ability-des {
+    font-size: 26px;
+    font-family:"Bitter", serif;
+    margin-block-start: 5px;
+    margin-block-end: 0;
+    font-style: italic;
+}
+.user-spec {
+    width:100%;
+    display: flex;
+    margin-top:45px;
+    flex-direction: column;
+    align-items: center;
+}
+.usrn-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 29px;
+}
+.usrid-container {
+    font-size: 29px;
+    display:flex;
+    flex-direction: row;
+    margin-top:20px;
+}
+.entry-title {
+    font-size: 27px;
+}
+.entry-fields {
+    padding:4px;
+    font-size: 20px;
+    margin:0px;
+    height:70%;
+    margin-left: 15px;
+    background-color:#F5DEB3;
+}
+.button-container {
+    background-color:firebrick;
+    width:30%;
+    margin-top:20px;
+    height:65%;
+    margin-right:150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-container:hover {
+    background-color:#D45D5D;
+}
+.button-text {
+    color:white;
+    font-size: 30px;
+}
+.bottom-part {
+    display:flex;
+    justify-content: flex-end;
+    background-color:#F5DEB3;
+    height:120px;
+}

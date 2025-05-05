@@ -1,0 +1,192 @@
+html, body {
+    font-family: 'Hubot Sans', sans-serif;
+    font-size: 16px;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.top-Integrity {
+    display:flex;
+    flex-direction: row;
+}
+.title-container {
+    font-size: 2em;
+    background-color: yellow;
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    display:flex;
+    justify-content: center;
+}
+.title-text {
+    font-weight: 400;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+}
+.return-container {
+    font-size: 8px;
+    background-color: yellowgreen;
+    display:flex;
+    flex-direction: row;
+    width:20%;
+    display:flex;
+    justify-content: center;
+}
+.return-container:hover{
+    background-color:forestgreen;
+}
+.return-text {
+    font-size: 20px;
+    margin-top:30px;
+    text-align: center;
+}
+
+.mid-container {
+    background-color:burlywood;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 87%;
+}
+.left {
+    display: flex;
+    width:40%;
+    flex-direction: column;
+}
+.right {
+    display: flex;
+    width:60%;
+    flex-direction: column;
+}
+.right-top{
+    background-color: #A67C52;
+    height:7%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right-top-title {
+    font-size: 27px;
+}
+.hero-pic {
+    height:80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hero-icon-spec{
+    width:45%;
+    display:flex;
+}
+.hero-name {
+    font-size: 40px;
+    margin-top: 30px;
+    font-family: "Great Vibes", cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:39%;
+}
+#hero-name-display{
+    font-size: 40px;
+    font-family: "Great Vibes", cursive;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    white-space: nowrap;
+}
+.details {
+    background-color: darkgrey;
+    width:25px;
+    height:25px;
+    border-radius: 12.5px;
+    font-size:12.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:darkblue;
+    font-family: "Bitter", serif;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+.details:hover{
+    background-color: darkslategrey;
+    color: lightblue;
+}
+
+.right-bottom{
+    height:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5DEB3 ;
+}
+.button-container {
+    height: 10%;
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.button-container:hover {
+    background-color: #D45D5D;
+    width: 120%; 
+    margin-right: -20%;
+}
+.button-text {
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    user-select: none;
+}
+#locked {
+    background-color: grey;
+}
+#locked:hover{
+    background-color: darkgrey;
+    width:100%;
+}
+
+.proceed-button-container {
+    height: 70%;
+    background-color: firebrick;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.proceed-button-container:hover {
+    background-color: #D45D5D;
+}
+
+.description-box {
+    display: none;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    text-align: center;
+    width:45%;
+    border: solid black 2px;
+    background-color: lightgrey;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.details:hover .description-box {
+    display: block;
+}
+.details:hover .hero-icon-spec{
+    display:none;
+}
