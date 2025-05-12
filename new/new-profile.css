@@ -82,8 +82,8 @@ html, body {
     flex-direction: column;
 }
 .hero-icon-spec{
-    width:45%;
-    display:flex;
+    width:auto;
+    height:400px;
 }
 .hero-name {
     font-size: 40px;
@@ -172,9 +172,8 @@ html, body {
 
 .description-box {
     display: none;
-    padding-top: 160px;
-    padding-bottom: 160px;
     text-align: center;
+    height:400px;
     width:45%;
     border: solid black 2px;
     background-color: lightgrey;

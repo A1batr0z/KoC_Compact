@@ -45,14 +45,14 @@
             <div class="button-container" onclick="select_hero(this)">
                 <p class="button-text">George Martin</p>
             </div>
+            <div class="button-container" onclick="select_hero(this)">
+                <p class="button-text">Runlang Liu</p>
+            </div>
             <div class="button-container" id="locked" onclick="select_hero(this)">
                 <p class="button-text">Madam Suzanne Moore</p>
             </div>
             <div class="button-container" id="locked" onclick="select_hero(this)">
                 <p class="button-text">Sir Welik</p>
-            </div>
-            <div class="button-container" onclick="select_hero(this)">
-                <p class="button-text">Runlang Liu</p>
             </div>
             <div class="button-container" id="locked" onclick="select_hero(this)">
                 <p class="button-text">Chien Froid</p>
@@ -121,37 +121,32 @@
             switch(name){ //Change the text or style of elements on the page accordingly
                 case 'Joshua Gordon':
                     display_txt.style.fontFamily = "Great Vibes, cursive";
-                    display_img.style.width = "45%";
-                    display_img.style.height = "auto";
+                    display_img.style.width = "auto";
                     display_txt.style.fontSize = '45px';
                     display_motto.innerText = 'I am a Math nerd, and I am pround of this fact!';
                     break;
                 case 'Josephine Gordania':
                     display_txt.style.fontFamily = "Great Vibes, cursive";
-                    display_img.style.width = "45%";
-                    display_img.style.height = "auto";
+                    display_img.style.width = "auto";
                     display_txt.style.fontSize = '40px';
-                    display_motto.innerText = 'Ostensible traits do not make a good mathematician, only an fervent heart can lead to success.';
+                    display_motto.innerText = 'Ostensible traits do not make a good mathematician, only a fervent heart can lead to success.';
                     break;
                 case 'Dr. Gasser Khalifa':
                     display_txt.style.fontSize = '30px';
                     display_txt.style.fontFamily = "Bitter, serif";
-                    display_img.style.height = "78%";
-                    display_img.width = "auto";
+                    display_img.style.width = "auto";
                     display_motto.innerText = 'Eh eh eh, pas des iPads dans ma classe, éteint ça immédiatement!';
                     break;
                 case 'George Martin':
                     display_txt.style.fontSize = '37px';
                     display_txt.style.fontFamily = "Bitter, serif";
-                    display_img.style.height = "75%";
-                    display_img.width = "auto";
-                    display_motto.innerText = 'I\'s good eh?\n';
+                    display_img.style.width = "auto";
+                    display_motto.innerText = 'It\'s good eh?\n';
                     break;
                 case 'Runlang Liu':
                     display_txt.style.fontSize = '37px';
                     display_txt.style.fontFamily = "Bitter, serif";
-                    display_img.style.height = "75%";
-                    display_img.width = "auto";
+                    display_img.style.width = "45%";
                     display_motto.innerText = '\n这个是冰狗, 那个是黑鬼\n';
                     break;
                 default:
