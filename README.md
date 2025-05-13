@@ -9,6 +9,6 @@ Available functions:
 
 Coming soon:
 - Multilanguage support (literally translation)
-- Database to store player progress
+- Player progress tracking
 - Additional levels for differentiation chapter
 - *Probably more heros
