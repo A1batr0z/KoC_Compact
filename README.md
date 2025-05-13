@@ -5,10 +5,10 @@ This game is the culmating project of my computer science class, inspired by Odd
 
 Available functions:
 - Start a new game (Create new player profile)
-- First level of the differentiation chapter (Power Rule)
+- Play the first level of the differentiation chapter (Power Rule)
 
-What's up next:
+Coming soon:
 - Multilanguage support (literally translation)
 - Database to store player progress
-- More differentiation levels
+- Additional levels for differentiation chapter
 - *Probably more heros
