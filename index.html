@@ -28,7 +28,7 @@
         </div>
         <div class="button-container-id" onclick="validateID()" id="container-id">
             <input type="text" id="gameid" onclick="inputClick(event)">
-            <span style="display: none;" id="new">5f5c672d11eae541df8a2d13101e659b</span>
+            <span style="display: none;" id="new">YWIqJCYkXiYxMjM/IUE=</span>
             <p class="button-text" id="button-text-id">Load an existing game</p>
         </div>
         <div class="button-container" onclick="window.location.href='language.html';">
@@ -45,9 +45,9 @@
     <audio src="./soundtracks/title-bgm.mp3" autoplay></audio>
     <script>
         const special_container = document.getElementById('container-id');
-        const ver = document.getElementById('dec');
+        const ver = document.getElementById('dec').innerHTML;
         const id_con_text = document.getElementById('button-text-id');
-        const _nou = document.getElementById('new');
+        const _nou = document.getElementById('new').innerHTML;
 
         function validateID() {
             let gameIDs = ['j9812d928']
