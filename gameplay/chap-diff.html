@@ -25,7 +25,7 @@
         <div class="instruct-container">
             <h3 class="instruct-text">Differentiation</h3>
         </div>
-        <div class="button-container" onclick="window.location.href='differentiation/stage-1.html';" style="margin-top:0px">
+        <div class="button-container" onclick="toLvl(this)">
             <p class="button-text">Level I (Linear)</p>
         </div>
         <div class="button-container" onclick="window.location.href='differentiation/stage-2.html';">
@@ -51,7 +51,21 @@
         </div>
     </div>
     <script>
+        function toLvl(level) {
+            /*
+            Direct the player to the level specified (stage-layout + js)
+            */
+
+            levelName = level.querySelector('p').innerHTML;
+            localStorage.setItem('level', [levelName, 'diff']);
+            window.location.href = 'stage-layout.html';
+        }
+    
         function unavailable() {
+            /*
+            The level is currently unavailable
+            */
+           
             alert('This chapter is currently unavailable. To unlock, you need to finish the previous chapter!')
         }
     </script>

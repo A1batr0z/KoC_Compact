@@ -19,12 +19,14 @@ let life_count = 3;
 let dis_score = 10000;
 let correctIndex = 0;
 
-let session = localStorage.getItem('level')
+let session = localStorage.getItem('level').split(',');
 
 life.innerHTML = 'Lives left: 3';
+console.log(session)
 if (session[1] == 'diff') {
     instructText.innerHTML = 'Find the derivative of:';
 } else {
+    console.log('Second')
     instructText.innerHTML = 'Find the integral of:';
 }
 
@@ -82,6 +84,7 @@ function penalize(wrongOption) {
     wrongOption.style.backgroundColor = 'grey';
 
     // If life goes to 0
+    console.log('Current life count '+life_count);
     if (life_count == 0) {
         clearInterval(scoreInterval);
         localStorage.setItem('win', false);
@@ -107,9 +110,11 @@ function refresh() {
     Gameplay mechanics
     */
 
+    console.log('Refresh looping')
+
     // Update question count and display
     question_count ++;
-    progress.innerHTML = format('Question {question_count}/10');
+    progress.innerHTML = 'Question: ' + question_count + '/10';
 
     // Maximum & Minimum # of terms in the polynomials
     let current_terms = Math.round(Math.random()*4+1);
@@ -120,9 +125,8 @@ function refresh() {
 
     // Reinitialize listeners and fresh copy replacement
     options_set = options_set.map(option => {
-
+        
         // Deep clone the original option, then replace the whole node (on HTML and array)
-
         const newOption = option.cloneNode(true);
         option.replaceWith(newOption);
         return newOption;
@@ -132,29 +136,48 @@ function refresh() {
     correctIndex = Math.round(Math.random()*3);
 
     // Solve the question, and assign it to the correct option index, if clicked go to the next question
-    options_set[correctIndex].innerHTML = integralOf(current_coefficients).replace('f(x)','F(x)') + ' [V]';
+    options_set[correctIndex].innerHTML = pack(current_coefficients).replace('f(x)','F(x)') + ' [V]';
     options_set[correctIndex].addEventListener('click', refresh);
 
     // Restore colors for all options
     options_set.forEach(option => restore_color(option))
 
     // Traverse through the incorrect options
+    console.log('Current index: '+current_coefficients)
+    
     for(let i = 0; i <= 3; i++) {
-        if(i != correctIndex){
+
+        if (i != correctIndex) {
+
             // Assign incorrect answers / add penalty event listener to the rest
-            options_set[i].innerHTML = integralOf(randomize(current_coefficients)).replace('f(x)','F(x)');
-            options_set[i].addEventListener('click', () => penalty(option));
+            options_set[i].innerHTML = pack(randomize(current_coefficients)).replace('f(x)','F(x)');
+            options_set[i].addEventListener('click', () => penalize(options_set[i]));
 
             // Loop until the randomized(incorrect) response is not the same as the correct answer
+            console.log(options_set[i].innerHTML + ' [V]')
+            console.log(options_set[correctIndex].innerHTML)
+
             while(options_set[i].innerHTML + ' [V]' == options_set[correctIndex].innerHTML){
-                options_set[i].innerHTML = integralOf(randomize(current_coefficients)).replace('f(x)','F(x)');
+                console.log('while loop entered')
+                if (options_set[correctIndex].innerHTML != 0) {
+                    options_set[i].innerHTML = pack(randomize(current_coefficients)).replace('f(x)','F(x)');
+                } else {
+                    break;
+                }
+                console.log('While looping')
             }
+            
+            Nterm = Math.round(Math.random() + 1)
+            options_set[i].innerHTML = createFx(createIndex(Nterm));
         }
     }
 
+    console.log('Question: ' + problemText.innerHTML)
+    console.log('Answer: '+ options_set[correctIndex].innerHTML)
+
     // If reached the tenth question, win
     if (question_count == 10) {
-        clearInterval(scoreinterval);
+        clearInterval(scoreInterval);
         localStorage.setItem('win', true);
         localStorage.setItem('stats', [dis_score, 10, life_count]);
         resultScreen();
@@ -167,7 +190,7 @@ function resultScreen() {
     Direct the player to the result screen
     */
 
-    window.location.href='../result.html';
+    window.location.href='./result.html';
 }
 
 // Start recursion

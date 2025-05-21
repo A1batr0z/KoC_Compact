@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
     <!--Cascading style sheet-->
-    <link href='../stage-styling-universal.css' rel='stylesheet' type='text/css'>
+    <link href='./stage-styling.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <div class="top-bar">
-        <div class="control-button" id="fall-back"><img src="../../pic/control.png" width="50px"></div>
+        <div class="control-button" id="fall-back"><img src="../pic/control.png" width="50px"></div>
         <div class="top-status-container">
             <p class="top-status-text">Differentiation - Level I</p>
         </div>
@@ -39,6 +39,62 @@
         <div class="option-single" id="option-4"></div>
     </div>
     <audio src="tbd" autoplay></audio>
-    <script src="stage-1.js"></script>
+    <script>
+        level = localStorage.getItem('level').split(',')
+
+        function loadScript(src){
+            /*
+            Load/Execute a js script asynchronously
+            */
+
+            const script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            script.async = true;
+
+            document.head.appendChild(script);
+        }
+
+        // Find js script path for respective modes (differentiation and integration)
+        if (level[1] == 'diff') {
+            path = './differentiation/';
+        } else {
+            path = './integration/';
+        }
+        
+        // Find js script for specific level
+        switch (level[0]) {
+            case 'Level I (Linear)':
+                path += 'stage-1.js/';
+                break;
+
+            case 'Level I (Basic)':
+                path += 'stage-1.js/'
+                break;
+            
+            case 'Level II (Product & Quotient)':
+                path += 'stage-2.js/';
+                break;
+            
+            /*
+            case 'Level III (Exponent & Logarithm)':
+                path += 'stage-1.js/';
+            case 'Mix I (Chain Rule)':
+                
+            case 'Level IV (Trigonometry)':
+                
+            case 'Level V (L\'Hôpitals)':
+
+            case 'Mix II (Advanced)':
+            */
+            
+            default:
+                alert('Internal Error: Please try again later...');
+                break;
+        }
+
+        loadScript(path); // Fx generation logic for level
+        loadScript('./logic.js') //Main game logic
+    </script>
 </body>
 </html>

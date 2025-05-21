@@ -25,7 +25,7 @@
         <div class="instruct-container">
             <h3 class="instruct-text">Integration</h3>
         </div>
-        <div class="button-container" onclick="window.location.href='/integral/stage-1.html';" style="margin-top:0px">
+        <div class="button-container" onclick="toLvl(this)">
             <p class="button-text">Level I (Basic)</p>
         </div>
         <div class="button-container" id="locked" onclick="unavailable()">
@@ -54,7 +54,21 @@
         </div>
     </div>
     <script>
+        function toLvl(level) {
+            /*
+            Direct the player to the level specified (stage-layout + js)
+            */
+
+            levelName = level.querySelector('p').innerHTML;
+            localStorage.setItem('level', [levelName, 'inte']);
+            window.location.href = 'stage-layout.html';
+        }
+    
         function unavailable() {
+            /*
+            The level is currently unavailable
+            */
+
             alert('This chapter is currently unavailable. To unlock, you need to finish the previous chapter!')
         }
     </script>

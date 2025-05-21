@@ -33,16 +33,15 @@ body {
     height:100%;
 }
 .instruct-container {
-    font-size: 3em;
     display:flex;
     align-items: center;
-    text-align: center;
+    justify-content: center;
+    height: 20%;
+    width: 100%;
 }
 .instruct-text {
     color:brown;
-    text-align: center;
-    align-items: center;
-    margin-left:40px;
+    font-size: 3em;
 }
 .button-container {
     height: 7%;
