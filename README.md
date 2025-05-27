@@ -10,5 +10,5 @@ Available functions:
 Coming soon:
 - Multilanguage support (literally translation)
 - Player progress tracking
-- Additional levels for differentiation chapter
-- *Probably more heros
+- Additional levels for integration chapter
+- *New hero "Chien Froid"
