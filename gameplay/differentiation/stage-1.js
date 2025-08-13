@@ -103,17 +103,22 @@ function derivativeOf(coefficients) {
 
     let derivative = [];
 
-    derivative = coefficients.map(coefficient => {
-        derivedTerm = coefficients.indexOf(coefficient)
-        console.log('DeriveTerm: '+derivedTerm) 
-        console.log('Coeff: '+coefficient)
-        console.log('Yield: '+(coefficient *(derivedTerm) + 'x<sup>' + (derivedTerm-1) + '</sup>'));
-        if (derivedTerm != 0 & coefficient != 0) {
-            return coefficient*(derivedTerm) + 'x<sup>' + (derivedTerm-1) + '</sup>';
+    derivative = coefficients.map((coefficient, index) => {
+        //console.log('DeriveTerm: '+index) 
+        //console.log('Coeff: '+coefficient)
+        //console.log('Yield: '+(coefficient *(index) + 'x<sup>' + (index-1) + '</sup>'));
+        if (index != 0 && coefficient != 0) {
+            return coefficient*index + 'x<sup>' + (index-1) + '</sup>';
         } else {
+            console.log("This term is constant!")
             return '';
         }
     });
+
+    // Filter none terms
+    derivative = derivative.filter(n => n)
+
+    console.log("This dv: "+derivative)
     
     // Replace redundant exponent notation
     derivative = derivative.map(term => {
